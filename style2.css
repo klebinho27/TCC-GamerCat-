@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background: #181818;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #02daff;
+    border-radius: 6px;
+}
+.header{
+    position: fixed;
+    background-color: #170e30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 100px;
+
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+header .sticky{
+    background-color: #1b2141;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.9);
+}
+
+
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#181818),
+    url(../images/fortnit.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.section-1-wrapper{
+    width: 70%;
+    margin: auto;
+}
+.section-1 h1{
+    width: 500px;
+    color: #02daff;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 400;
+}
+.section-1-img{
+    display: flex;
+    position: relative;
+    left: 15%;
+    
+}
+.section-1-img .img{
+    width: 100px;
+    height: 130px;
+    background: url(jumanji.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    
+}
+.section-1-img .img-2{
+    background: url(far-cry-6.png);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-3{
+    background: url(game.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-4{
+    background: url(incrdible.png);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-5{
+    background: url(craft.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-6{
+    background: url(fortnite.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img:hover{
+    transform: translateY(-10px);
+}
+
+/*section 2*/
+
+.game-categories{
+    width: 70%;
+    margin: 50px auto;
+    position: relative;
+}
+.game-categories h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #02daff;
+}
+.game-wrapper{
+    display: flex;
+}
+.gw{
+    width: 120px;
+    height: 120px;
+    background: url(asphalt8.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 20px 15px 0 0;
+    border-radius: 10px;
+}
+.gw:hover{
+    transform: translateY(-10px);
+}
+.left{
+    position: relative;
+    right: -140px;
+}
+
+.gw-1{
+    background: url(e-football-xbox.png);
+    background-size: cover;
+    background-position: center;
+}
+.gw-2{
+    background: url(nba.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-3{
+    background: url(cavalo.png);
+    background-size: cover;
+    background-position: center;
+}
+.gw-4{
+    background: url(the-crew.png);
+    background-size: cover;
+    background-position: center;
+}
+.gw-5{
+    background: url(project.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*resposivo*/
+@media screen and (max-width:728) {
+    body{
+        padding: none;
+    }
+    .section-0{
+        align-items: center;
+    }
+}   
+
+

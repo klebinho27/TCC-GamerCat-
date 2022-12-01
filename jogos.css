@@ -1,0 +1,784 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
+/*menu navba*/
+.imagem-logo{
+    width: 60px;
+    left: 5%;
+}
+
+.header, .navigation-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #02daff;
+    border-radius: 6px;
+}
+.header{
+    position: fixed;
+    background-color: #170e30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 100px;
+
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+header .sticky{
+    background-color: #1b2141;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.9);
+}
+
+.navigation-header{
+    margin-right: 25%;
+    gap: 3em;
+    z-index: 2;
+}
+
+.navigation-header a{
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+    font-weight: bold;
+}
+.navigation-header a:hover{
+    color: #ef1e9d;
+    cursor: pointer;
+}
+.active{
+    background-color: #0a021d;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.btn-icon-hader{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+/*caixa de pesquisa*/
+
+.search-box{
+    position: absolute;
+    top: 20%;
+    left: 78%;
+    transform: translate(-10%, -10%);
+    background: #1f0d79;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+::-webkit-input-placeholder{
+    color: #ef1e9d;
+    opacity: 40%;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1f0d79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+    background: white;
+
+}
+
+@media screen and (max-width:768px) {
+    .header{
+        justify-content: space-between;
+    }
+    .btn-icon-hader{
+        display: block;
+    }
+    .navigation-header{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: #1b0a49;
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .search-box{
+        top: 68%;
+        left: 71%;
+        transform: translate(-70%, -40%);
+    }
+
+    .search-btn{
+        display: none;
+    }
+    .search-txt{
+        display: block;
+        width: 99px;
+    }
+    .search-box:hover > .search-txt{
+        width: 99px;
+        padding: none;
+    }
+}
+
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    top{margin-left: -40vw;}
+}
+
+
+/*mnh área de codigos*/
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg .content1{
+    width: 50%;
+    height: 100%;
+}
+
+.banner .bg .content1 h2{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.banner .bg .content1 p{
+    font-size: 1em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+
+.banner .bg .content1 a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #02daff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.banner .bg .content1 a:hover{
+    background-color: #ef1e9d;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ef1e9d;
+} 
+
+.banner .bg img{
+    width: 600px;
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .contentbx{
+    width: 50%;
+    margin: 20px;
+}
+
+.about .contentbx h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about .contentbx p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+
+.about .contentbx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #02daff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.about .contentbx a:hover{
+    background-color: #ef1e9d;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ef1e9d;
+} 
+
+.games{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.games h2{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.games ul li{
+    list-style:none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.games ul li .active{
+    background: #02daff;
+    color: #ef1e9d;
+    box-shadow: 0 0 10 #02daff;
+}
+
+.games .cardbx{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.games .cardbx .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+}
+
+.games .cardbx .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.games .cardbx .card .content{
+    padding: 10px;
+}
+
+.games .cardbx .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+
+.games .cardbx .card .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #35407e;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.games .cardbx .card .progress-line span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #02daff;
+    box-shadow: 0 0 10px #02daff;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.games .cardbx .card .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games .cardbx .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+
+.games .cardbx .card .info p span{
+    color: #02daff;
+
+}
+
+.games .cardbx .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #02daff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.games .cardbx .card .info a:hover{
+    background: #ef1e9d;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #02daff;
+}
+
+.games .cardbx .card .hide{
+    display: none;
+    
+}
+
+.tournaments{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournaments h2{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.tournaments .boxbx{
+     width: 100%;
+     min-height: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+}
+
+.tournaments .boxbx .box{
+    width: 350px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+}
+
+.tournaments .boxbx .box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tournaments .boxbx .box .content{
+    padding: 10px;
+
+}
+
+.tournaments .boxbx .box .content h4{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.tournaments .boxbx .box .content h4 span{
+    color: #02daff;
+}
+
+.tournaments .boxbx .box .content p{
+    text-align: justify;
+    color: #dbd9d9;
+    margin-top: 10px;
+}
+
+.tournaments .boxbx .box .content .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tournaments .boxbx .box .content .watch{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #02daff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #050e2d;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #02daff;
+}
+
+.tournaments .boxbx .box .content .watch:hover{
+    border: 1px solid #02daff;
+    background: none;
+    color: #fff;
+    box-shadow: none    ;
+}
+
+.tournaments .boxbx .box .content .join{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #02daff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.tournaments .boxbx .box .content .join:hover{
+    background: #ef1e9d;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #02daff;
+}
+
+/*acabou minha parte*/
+
+ 
+.arrow-left, .arrow-right {
+  position: relative;
+  top: -14px;
+  left: 87%;
+  right: auto;
+  font-size: 30px;
+  line-height: 50px;
+  width: 50px;
+  transition: all 600ms ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 80%;
+}
+
+.arrow-left i{
+    position: relative;
+    top: -4px;
+    left: 0%;
+}
+
+.arrow-right i{
+    position: relative;
+    top: -4px;
+    left: -25%;
+}
+.arrow-left:hover, .arrow-right:hover {
+  background: #ef1e9d;
+
+}
+
+.arrow-right {    
+    text-align: right;
+  }
+
+  .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+  }
+
+  
+ 
+  .item:hover{
+    cursor: pointer;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+  }
+
+  .item {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+  }
+  
+  .current-item {
+    opacity: 1;
+  }
+
+  /* Isso é da w3schools */
+/* 
+https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Ocultar barra de rolagem para Chrome, Safari e Opera */
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*Ocultar barra de rolagem para IE, Edge e Firefox */
+.gallery-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .cyan {
+    background: cyan;
+  }
+  
+  .deeppink {
+    background: deeppink;
+  }
+  
+  .turquoise {
+    background: turquoise;
+  }
+  
+  .darkblue {
+    background: darkblue;
+  }
+  
+  .purple {
+    background: purple;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+footer{
+    background-color: #211c2c;
+    padding: 50px 0;
+}
+.container-footer{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+.footer-col .medias-socias{
+    margin-top: 30px;
+}
+.footer-col .medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+.footer-col .medias-socias a i{
+    font-size: 20px;
+}
+
+.footer-col .medias-socias a:hover{
+    color: #415aca;
+    background-color: white;
+}
+.footer-col .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: #415aca;
+}
+.footer-col .form-sub input::placeholder{
+    color: white;
+}
+.footer-col .form-sub button{
+    
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #415aca;
+    border-radius: 3px;
+    font-weight: bold;
+    background: #02daff;      
+}
+
+.form-sub a{
+    color: #2b134b;
+    text-decoration: none;  
+}
+
+.form-sub{
+    position: relative;
+    left: -50px;
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #02daff;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.form-sub:hover{
+    background: #ef1e9d;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.logoDaEmpresa{
+    color: white;
+    font-weight: 1000;
+}
+
+
+/* Responsivo */
+@media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:600px) {
+    .footer-col{
+        width: 100%;
+    }
+}

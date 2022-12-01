@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="GamerCat.ico" type="image/x-icon">
+    <link rel="stylesheet" href="jogo-gamercat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>GamerCat</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn-icon-hader">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </button>
+        <div class="logo-header">
+            <img src="logo-removebg-preview.png" class="imagem-logo" alt="GamerCat">
+        </div>
+        <div class="navigation-header" id="navigation-header">
+            <button onclick="toggleSidebar()" class="btn-icon-hader">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </button>
+            
+            <a href="index.html">Noticias</a>
+            <a href="jogos-principal.html" class="active">Jogos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#formu">Contato</a>
+            <div class="search-box">
+                <input type="text" class="search-txt" placeholder="Pesquisar">
+                <a href="#" class="search-btn">
+                    <img src="busca-removebg-preview.png" alt="Lupa" height="20" width="20">
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
+    
+    
+        <div class="jogos">
+            <section class="cardssss">
+                <div class="card o1" style="width: 20rem;">
+                 <a href="index5.html"> <img src="nossos2.png" class="card-img-top" alt="..."></a>
+                </div>
+                
+                <div class="card o2" style="width: 20rem;">
+                    <a href="index6.html"><img src="dash.png" class="card-img-top" alt="..."></a>
+                </div>
+    
+    
+              </section>
+        </div>
+
+    
+    
+        <footer class="formu" id="formu">
+            <div class="container-footer">
+                <div class="row-footer">
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#"> Quem somos </a></li>
+                            <li><a href=""> programa de afiliados</a></li>
+                        </ul>
+                    </div>
+                    <!--end footer col-->
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Obter ajuda</h4>
+                        <ul>
+                            <li><a href="#">devoluções</a></li>
+                            <li><a href="#">Status De Pedido</a></li>
+                            <li><a href="#">Opções De Pagamento</a></li>
+                        </ul>
+                    </div>
+                    <!--end footer col-->
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Loja online</h4>
+                        <ul>
+                            <li><a href="#">Jogos </a></li>
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#">Gift card</a></li>
+                            <li><a href="#">Acessórios</a></li>
+                        </ul>
+                    </div>
+                    <!--end footer col-->
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Junti-se a nos!</h4>
+                        <a href="login-tcc.html"> <button class="form-sub"> Login</button> </a>
+    
+                        <div class="medias-socias">
+                            <a href="https://www.twitch.tv/lupinzinnn"> <i class="fa fa-twitch"></i> </a>
+                              <a href="https://www.instagram.com/gamercat.1/reels/"> <i class="fa fa-instagram"></i> </a>
+                              <a href="#"> <i class="fa fa-whatsapp"></i> </a>
+                           
+                        </div>
+                        
+                    </div>
+                    <div class="logoDaEmpresa">&copy;2022 GamerCat</div>
+                    
+                </div>
+            </div>
+        </footer>
+    
+    
+
+
+    </div>
+    <script src="jogo-gamercat.js"></script>
+</body>
+</html>
